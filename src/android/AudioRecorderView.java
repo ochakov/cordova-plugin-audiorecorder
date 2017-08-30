@@ -34,7 +34,7 @@ public class AudioRecorderView extends RelativeLayout {
 
     private static int AUDIO_SOURCE = MediaRecorder.AudioSource.MIC;
     private static int OUTPUT_FORMAT = MediaRecorder.OutputFormat.MPEG_4;
-    private static String EXTENSION_FILE = "mp4";
+    private static String EXTENSION_FILE = "m4a";
     private static int AUDIO_ENCODER = MediaRecorder.AudioEncoder.AAC;
 
     private static int DEFAULT_VIEW_COLORS = Color.WHITE;
