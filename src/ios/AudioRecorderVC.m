@@ -118,9 +118,9 @@ typedef NS_ENUM(NSUInteger, OSRecorderState) {
     int i = 1;
     do {
         if(containerExists){
-            filePath = [NSString stringWithFormat:@"%@/temp_%03d.mp4", containerPath, i++];
+            filePath = [NSString stringWithFormat:@"%@/temp_%03d.m4a", containerPath, i++];
         } else {
-            filePath = [NSString stringWithFormat:@"%@/temp_%03d.mp4", docsPath, i++];
+            filePath = [NSString stringWithFormat:@"%@/temp_%03d.m4a", docsPath, i++];
         }
     } while ([fileMgr fileExistsAtPath:filePath]);
     
