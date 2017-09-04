@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-           id="com.outsystems.audiorecorder"
-      version= "1.0.3">
-    <name>AudioRecorder Plugin</name>
-    <description>Record Audio easily with the device microphone.</description>
+           id="cordova-plugin-audio-recorder"
+      version= "1.0.4">
+    <name>Cordova Audio Recorder Plugin</name>
+    <description>Record Audio easily with the device microphone</description>
     <license>MIT License</license>
     <keywords>cordova, outsystems, record, microphone, audio</keywords>
-    <repo></repo>
+    <repo>https://github.com/cocowalla/cordova-plugin-audiorecorder.git</repo>
     <issue></issue>
 
     <js-module src="www/AudioRecorder.js" name="AudioRecorder">
