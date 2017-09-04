@@ -1,5 +1,5 @@
 {
-  "version": "1.0.4",
+  "version": "1.0.5",
   "name": "cordova-plugin-audio-recorder",
   "cordova_name": "AudioRecorder",
   "description": "Record Audio easily with the device microphone",
@@ -7,9 +7,9 @@
   "repo": "https://github.com/cocowalla/cordova-plugin-audiorecorder",
   "author": "OutSystems",
   "contributors": [
-    { 
-      "name" : "cocowalla",
-      "url" : "https://github.com/cocowalla"
+    {
+      "name": "cocowalla",
+      "url": "https://github.com/cocowalla"
     }
   ],
   "issue": "",
