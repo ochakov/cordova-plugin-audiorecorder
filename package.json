@@ -1,5 +1,5 @@
 {
-  "version": "1.0.7",
+  "version": "1.0.5",
   "name": "cordova-plugin-audio-recorder",
   "cordova_name": "AudioRecorder",
   "description": "Record Audio easily with the device microphone",
