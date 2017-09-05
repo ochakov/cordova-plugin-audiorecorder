@@ -130,8 +130,8 @@ typedef NS_ENUM(NSUInteger, OSRecorderState) {
     NSDictionary *recordSetting = [NSDictionary dictionaryWithObjectsAndKeys:
                                    [NSNumber numberWithInt: kAudioFormatMPEG4AAC], AVFormatIDKey,
                                    [NSNumber numberWithInt: AVAudioQualityMedium], AVEncoderAudioQualityKey,
-                                   [NSNumber numberWithFloat:24000.0], AVSampleRateKey, // Good enough for speech
-                                   [NSNumber numberWithInt:16384], AVEncoderBitRateKey,
+                                   [NSNumber numberWithFloat:44100.0], AVSampleRateKey, // Good enough for speech
+                                   [NSNumber numberWithInt:32768], AVEncoderBitRateKey,
                                    [NSNumber numberWithInt:1], AVNumberOfChannelsKey, // Mono
                                    nil];
 

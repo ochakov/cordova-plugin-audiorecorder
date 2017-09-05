@@ -2,7 +2,7 @@
 
 Record MPEG4/AAC encoded audio from your hybrid app.
 
-Audio is recorded at 24kHz with a bitrate of 16kbps, which is good enough for speech.
+Audio is recorded at 44.1kHz with a bitrate of 32kbps, which is good enough for speech.
 
 This plugin defines a global ( `navigator.device.audiorecorder` ) object which you can use to access the public API.
 
