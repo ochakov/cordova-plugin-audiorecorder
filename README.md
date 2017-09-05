@@ -1,6 +1,8 @@
 # AudioRecorder Plugin
 
-Leverage your hybrid applications with audio recording functionalities.
+Record MPEG4/AAC encoded audio from your hybrid app.
+
+Audio is recorded at 24kHz with a bitrate of 16kbps, which is good enough for speech.
 
 This plugin defines a global ( `navigator.device.audiorecorder` ) object which you can use to access the public API.
 
@@ -28,7 +30,7 @@ function onDeviceReady() {
 - Run the following command:
 
 ```shell
-    cordova plugin add https://github.com/OutSystems/cordova-plugin-audiorecorder.git
+    cordova plugin add cordova-plugin-audio-recorder
 ``` 
 ---
 
@@ -135,6 +137,8 @@ Play recording screen <br />
     - Rúben Gonçalves, <ruben.goncalves@outsystems.com>
     - Vitor Oliveira, <vitor.oliveira@outsystems.com>
     - Danilo Costa, <danilo.costa@outsystems.com>
+
+- Colin Anderson, [Github](https://github.com/cocowalla)
 
 #### Document author
 - João Gonçalves, <joao.goncalves@outsystems.com>

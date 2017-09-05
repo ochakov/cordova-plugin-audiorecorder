@@ -34,6 +34,9 @@ public class AudioRecorderView extends RelativeLayout {
 
     private static int AUDIO_SOURCE = MediaRecorder.AudioSource.MIC;
     private static int OUTPUT_FORMAT = MediaRecorder.OutputFormat.MPEG_4;
+    private static int CHANNELS = 1; // Mono
+    private static int SAMPLING_RATE = 24000; // Good enough for speech
+    private static int BITRATE = 16384;
     private static String EXTENSION_FILE = "m4a";
     private static int AUDIO_ENCODER = MediaRecorder.AudioEncoder.AAC;
 
@@ -43,9 +46,11 @@ public class AudioRecorderView extends RelativeLayout {
     // Views
     ViewSwitcher mViewSwitcher;
     TextView textViewCounter;
+
     // Handlers and Listners
     Handler handler;
     AudioRecorderListener mAudioRecorderListener;
+
     // Helpers
     boolean isRecording;
     int recordLimitTime = 0;
@@ -54,6 +59,7 @@ public class AudioRecorderView extends RelativeLayout {
     int colorBackground;
     String fileName;
     String filePath;
+
     // Initialization of Runnable to update counter of time record
     Runnable UpdateRecordTime = new Runnable() {
         public void run() {
@@ -83,6 +89,9 @@ public class AudioRecorderView extends RelativeLayout {
                 mRecorder = new MediaRecorder();
                 mRecorder.setAudioSource(AUDIO_SOURCE);
                 mRecorder.setOutputFormat(OUTPUT_FORMAT);
+                mRecorder.setAudioChannels(CHANNELS);
+                mRecorder.setAudioSamplingRate(SAMPLING_RATE);
+                mRecorder.setAudioEncodingBitRate(BITRATE);
 
 // Generate file name and get the path to save the files
                 FileManager fileManager = new FileManager(getContext());
@@ -118,6 +127,7 @@ public class AudioRecorderView extends RelativeLayout {
             }
         }
     };
+
     private OnClickListener onClickListenerPlayRecord = new OnClickListener() {
 
         @Override
@@ -156,6 +166,7 @@ public class AudioRecorderView extends RelativeLayout {
             }
         }
     };
+
     private OnClickListener onClickListenerRejectAudio = new OnClickListener() {
 
         @Override
@@ -177,6 +188,7 @@ public class AudioRecorderView extends RelativeLayout {
             mViewSwitcher.showPrevious();
         }
     };
+
     private OnClickListener onClickListenerAcceptAudio = new OnClickListener() {
 
         @Override
@@ -186,6 +198,7 @@ public class AudioRecorderView extends RelativeLayout {
             sendSuccessCallback(filePath, fileName);
         }
     };
+
     private OnClickListener onClickListenerCloseView = new OnClickListener() {
 
         @Override
