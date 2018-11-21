@@ -1,14 +1,18 @@
 # AudioRecorder Plugin
-
-Record MPEG4/AAC encoded audio from your hybrid app.
+Record MPEG4/AAC encoded audio from your hybrid app, on both iOS and Android.
 
 Audio is recorded at 44.1kHz with a bitrate of 32kbps, which is good enough for speech.
 
-This plugin defines a global ( `navigator.device.audiorecorder` ) object which you can use to access the public API.
+This plugin defines a global `navigator.device.audiorecorder` object which you can use to access the public API.
 
+## Installation
+This plugin is available on [npm](https://www.npmjs.com/package/cordova-plugin-audio-recorder), and can be installed with the following command:
+
+```shell
+cordova plugin add cordova-plugin-audio-recorder
+``` 
 
 ## Plugin
-
 Although `audiorecorder` is globally acessible, it isn't usable until `deviceready` event is called.
 
 As with all the cordova plugins, you can listen to `deviceready` event as follows: 
@@ -19,25 +23,11 @@ function onDeviceReady() {
     // ...
 }
 ```
-
-## Supported Platforms
-
- - iOS
- - Android 
-
-
-## Installation
-- Run the following command:
-
-```shell
-    cordova plugin add cordova-plugin-audio-recorder
-``` 
 ---
 
 ## API Reference
 
 ### AudioRecorder (`navigator.device.audiorecorder`)
-
  - [`.recordAudio(successCallback, errorCallback, durationLimit, viewColor, backgroundColor)`](#recordAudio)
  - [`.deleteAudioFile(successCallback, errorCallback, filepath)`](#deleteAudioFile)
  
@@ -45,7 +35,6 @@ function onDeviceReady() {
 
 <a name="recordAudio"></a>
 #### Record Audio file
-
 Calling this method opens the native GUI for the recorder.
 
 | Param             | Type      | Description |
@@ -56,7 +45,6 @@ Calling this method opens the native GUI for the recorder.
 
 <a name="deleteAudioFile"></a>
 #### Delete Audio file
-
 Deletes an audio file given its filepath
 
 | Param             | Type      | Description   |
@@ -69,7 +57,6 @@ Deletes an audio file given its filepath
 
 <a name="successCallback"></a>
 #### Success Callback
-
 Signature: 
 
 ```javascript
@@ -89,7 +76,6 @@ where `data` parameter is a JSON object:
 
 <a name="errorCallback"></a>
 #### Error Callback
-
 Signature: 
 
 ```javascript
@@ -117,17 +103,14 @@ Possible `error_code` values:
 ---
 
 #### How it looks
-
-
 Recording screen <br />
-![Imgur](http://i.imgur.com/EnMi0XDm.png =50x50)
+![](http://i.imgur.com/EnMi0XDm.png=50x50)
 
 Stop recording screen <br />
-![Imgur](http://i.imgur.com/kzT2mugm.png=50x50)
+![](http://i.imgur.com/kzT2mugm.png=50x50)
 
 Play recording screen <br />
-![Imgur](http://i.imgur.com/s10ijTbm.png =50x50)
-
+![](http://i.imgur.com/s10ijTbm.png=50x50)
 
 ---
 
@@ -140,8 +123,9 @@ Play recording screen <br />
 
 - Colin Anderson, [Github](https://github.com/cocowalla)
 
-#### Document author
+#### Document authors
 - João Gonçalves, <joao.goncalves@outsystems.com>
+- Colin Anderson, [Github](https://github.com/cocowalla)
 
 ###Copyright OutSystems, 2016
 
